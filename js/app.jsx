@@ -20,10 +20,12 @@ class App extends React.Component {
                         <Route exact path="/" component={Start}></Route>
                         <Route exact path="/adult" component={Adult}></Route>
                         <Route exact path="/young" component={Young}></Route>
+                        <Route exact path="/adult/rulette" component={Rulette}></Route>
+                        <Route exact path="/adult/dice" component={DiceGame}></Route>
+                        <Route exact path="/adult/blackjack" component={BlackJack}></Route>
                     </Switch>
                 </div>
             </HashRouter>
-
         )
     }
 }
@@ -46,29 +48,99 @@ class Start extends React.Component {
     }
 }
 
-
 class Adult extends React.Component {
   constructor(props){
         super(props);
         this.state = {
-            option: ""
+            option: "Ruletka",
+            go: false
         }
     }
 
-    render(){
-          return (
-              <HashRouter>
-                  <div>
-                      <Switch>
-                          <Route exact path="/adult/" component={Adult}></Route>
-                          <Route exact path="/young/" component={Young}></Route>
-                      </Switch>
-                  </div>
-              </HashRouter>
-          )
+    changeGameBoard = (e) => {
+      this.setState({
+          option: e.currentTarget.value
+      })
+    };
 
+    chosenGame = () => {
+        this.setState({
+            go: true
+        })
+    };
+
+    render(){
+        if(this.state.option ==="Ruletka" && this.state.go === true){
+            return <Redirect to="/adult/rulette/" />
+        }else if(this.state.option ==="Gra w kości" && this.state.go === true){
+            return <Redirect to="/adult/dice" />
+        }else if(this.state.option ==="BlackJack" && this.state.go === true){
+            return <Redirect to="/adult/blackjack" />
+        }else {
+             return (
+                 <div>
+                     <div>
+                         <h1>Wybierz Gre</h1>
+                         <select value={this.state.value} onChange={this.changeGameBoard}>
+                             <option value="Ruletka">Ruletka</option>
+                             <option value="Gra w kości">Gra w kości</option>
+                             <option value="BlackJack">BlackJack</option>
+                         </select>
+                         <button onClick={this.chosenGame}>Zagraj</button>
+                     </div>
+                 </div>
+             )
+         }
     }
 }
+
+
+class Rulette extends React.Component {
+  constructor(props){
+        super(props);
+    }
+
+    render(){
+        return(
+            <div>
+                Witaj na rulettce
+            </div>
+
+        )
+    }
+}
+
+class DiceGame extends React.Component { // do zrobienia później
+  constructor(props){
+        super(props);
+    }
+
+    render(){
+        return(
+            <div>
+                Witaj na grze w kosci
+            </div>
+        )
+    }
+}
+
+class BlackJack extends React.Component {   // do zrobienia później
+    constructor(props){
+        super(props);
+    }
+
+    render(){
+        return(
+            <div>
+                Witaj na BlackJacku
+            </div>
+        )
+    }
+}
+
+
+
+
 
 class Young extends React.Component {
     constructor(props){
