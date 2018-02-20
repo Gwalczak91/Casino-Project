@@ -1,0 +1,11 @@
+@import "modules/cssreset";
+
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  background-color: gold;
+  background-image: url("../img/casino-home.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
