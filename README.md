@@ -1,2 +1,2 @@
 # Casino-Project
-Website with casiono games
+Website with casino games
