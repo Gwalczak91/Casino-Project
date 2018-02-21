@@ -1,35 +1,18 @@
 @import "modules/cssreset";
+@import "modules/hoilyGrail";
+@import "partials/home";
 
 
 .home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
   background-color: gold;
-  background-image: url("../img/casino-home.jpeg");
+  background-image: url("../img/casino-back.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
+  color: white;
 }
 
-.HolyGrail,
-.HolyGrail-body {
-  display: flex;
-  flex-direction: column;
-}
-
-.HolyGrail-nav {
-  order: -1;
-}
-
-@media (min-width: 768px) {
-  .HolyGrail-body {
-    flex-direction: row;
-    flex: 1;
-  }
-  .HolyGrail-content {
-    flex: 1;
-  }
-  .HolyGrail-nav, .HolyGrail-ads {
-    /* 12em is the width of the columns */
-    flex: 0 0 12em;
-  }
-}

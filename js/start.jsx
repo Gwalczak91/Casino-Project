@@ -8,12 +8,15 @@ class Start extends React.Component {
 
     render(){
         return(
-            <div>
-                <h1>Great Casino</h1>
-                <p>Aby wejść na strone trzeba mieć ukonczone 18 lat</p>
-                <button><NavLink  exact to="/adult">Mam skończone 18 lat</NavLink></button>
-                <button><NavLink  exact to="/young">Mam poniżej 18 lat</NavLink></button>
-
+            <div className="home">
+                <div>
+                    <h1 className="headerHomeStyle">Great Casino</h1>
+                    <p className="paragrafHomeStyle">Aby wejść na strone trzeba mieć ukończone 18 lat !!!</p>
+                    <div className="wrapperHomeButtons">
+                        <button className="btnStart homeButtons"><NavLink  exact to="/young">Mam poniżej 18 lat</NavLink></button>
+                        <button className="btnStart homeButtons"><NavLink  exact to="/adult">Mam skończone 18 lat</NavLink></button>
+                    </div>
+                </div>
             </div>
         )
     }

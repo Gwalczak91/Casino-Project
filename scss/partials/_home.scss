@@ -1,0 +1,24 @@
+//// Style dla pliku start.jsx
+
+.headerHomeStyle {
+  margin-bottom: 20px;
+  font-size: 50px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.paragrafHomeStyle {
+  text-align: center;
+}
+
+.wrapperHomeButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+
+.homeButtons {
+  text-transform: uppercase;
+  font-size: 15px;
+}

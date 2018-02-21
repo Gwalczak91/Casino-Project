@@ -41,6 +41,16 @@ class Rulette extends React.Component {
             this.setState({
                 kwota: this.state.kwota + (this.state.bet*36)
             })
+        }else if(this.state.randomNum % 2 === 0 && this.state.betSpace == "Even"){
+            alert("Gratulacje wygrałeś zakład");
+            this.setState({
+                kwota: this.state.kwota + (this.state.bet*2)
+            })
+        }else if(this.state.randomNum % 2 != 0 && this.state.betSpace == "Odds"){
+            alert("Gratulacje wygrałeś zakład");
+            this.setState({
+                kwota: this.state.kwota + (this.state.bet*2)
+            })
         }else{
             alert("Porażka ;(")
         }
