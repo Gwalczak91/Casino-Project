@@ -8,10 +8,10 @@ class Young extends React.Component {
 
     render(){
         return(
-            <div>
-                <div>
-                    <img src={img}></img>
-                    <h1>Wymagane posiadanie 18 lat</h1>
+            <div className="home">
+                <div className="youngStylePage">
+                    <img src={img} alt="Zakaz" title="Zakaz"></img>
+                    <h1 style={{marginTop: "25px"}}>Wymagane posiadanie 18 lat !!!</h1>
                 </div>
             </div>
         )

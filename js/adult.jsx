@@ -32,15 +32,16 @@ class Adult extends React.Component {
             return <Redirect to="/adult/blackjack" />
         }else {
             return (
-                <div>
-                    <div>
+                <div className="home">
+                    <div style={{textAlign: "center", textTransform: "uppercase"}}>
                         <h1>Wybierz Gre</h1>
-                        <select value={this.state.value} onChange={this.changeGameBoard}>
+                        <select className="selectStyles" value={this.state.value} onChange={this.changeGameBoard}>
                             <option value="Ruletka">Ruletka</option>
                             <option value="Gra w kości">Gra w kości</option>
                             <option value="BlackJack">BlackJack</option>
                         </select>
-                        <button onClick={this.chosenGame}>Zagraj</button>
+                        <br />
+                        <button className="buttonStyles" onClick={this.chosenGame}>Zagraj</button>
                     </div>
                 </div>
             )
