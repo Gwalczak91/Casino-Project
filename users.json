@@ -5,17 +5,18 @@
       "name": "Jan",
       "age": 43,
       "password": "123"
+    },
+    {
+      "name": "Grzegorz",
+      "age": "27",
+      "password": "qwerty",
+      "id": 2
+    },
+    {
+      "name": "",
+      "age": "",
+      "password": "",
+      "id": 3
     }
   ]
-
-
-
-
-
-
-
-
-
-
-
 }
