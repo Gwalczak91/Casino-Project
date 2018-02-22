@@ -82,17 +82,21 @@ class LogIn extends React.Component {
             return <Redirect to="/logIn/register" />
         }else {
             return (
-                <div>
-                    <label>Podaj Swoje Imie:</label>
-                    <br/>
-                    <input onChange={this.nameChange} type="text" value={this.state.name}/>
-                    <br/>
-                    <label>Podaj Hasło:</label>
-                    <br/>
-                    <input onChange={this.passwordChange} type="password" value={this.state.password}/>
-                    <br/>
-                    <button onClick={this.checkData}>Zaloguj</button>
-                    <button onClick={this.goToRegisterPage}>Rejestracja</button>
+                <div className="home">
+                    <div>
+                        <label>Podaj login:</label>
+                        <br/>
+                        <input className="breaker" onChange={this.nameChange} type="text" value={this.state.name}/>
+                        <br/>
+                        <label>Podaj hasło:</label>
+                        <br/>
+                        <input className="breaker" onChange={this.passwordChange} type="password" value={this.state.password}/>
+                        <br/>
+                        <div className="wrapperLoginButtons">
+                            <button onClick={this.checkData}>Zaloguj</button>
+                            <button onClick={this.goToRegisterPage}>Rejestracja</button>
+                        </div>
+                    </div>
                 </div>
 
             )

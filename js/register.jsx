@@ -69,19 +69,19 @@ class Register extends React.Component {
             return <Redirect to="/logIn"/>
         }else {
             return (
-                <div>
+                <div className="home">
                     <div>
                         <label>Podaj swój login:</label>
                         <br/>
-                        <input onChange={this.loginChange} type="text" value={this.state.login}/>
+                        <input className="breaker" onChange={this.loginChange} type="text" value={this.state.login}/>
                         <br/>
                         <label>Podaj swój wiek: <span>{this.state.wrongAge}</span></label>
                         <br/>
-                        <input onChange={this.ageChange} type="number" value={this.state.age}/>
+                        <input className="breaker" onChange={this.ageChange} type="number" value={this.state.age}/>
                         <br/>
                         <label>Wpisz hasło:</label>
                         <br/>
-                        <input onChange={this.passChange} type="password" value={this.state.pass}/>
+                        <input className="breaker" onChange={this.passChange} type="password" value={this.state.pass}/>
                         <br/>
                         <button onClick={this.acceptButton}>Zatwierdź</button>
 
