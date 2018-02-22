@@ -1,0 +1,48 @@
+//// Style dla pliku rulette.jsx
+
+.tableTDStyles {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black
+}
+
+.headerRuletteSyles {
+  text-align: center;
+  padding-top: 25px;
+}
+
+ol li {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+ul li {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+td {
+  color: white;
+  text-align: center;
+}
+
+#row1 td:nth-child(2n-1), #row3 td:nth-child(2n-1){
+  background-color: red;
+}
+
+#row1 td:nth-child(2n), #row3 td:nth-child(2n){
+  background-color: black;
+}
+
+#row2 td:nth-child(2n){
+  background-color: red;
+}
+
+#row2 td:nth-child(2n-1){
+  background-color: black;
+}
+
+#gameTurn {
+  color: white;
+  font-size: 18px;
+}
