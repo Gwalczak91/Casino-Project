@@ -14,7 +14,7 @@ class Start extends React.Component {
                     <p className="paragrafHomeStyle">Aby wejść na strone trzeba mieć ukończone 18 lat !!!</p>
                     <div className="wrapperHomeButtons">
                         <button className="btnStart homeButtons"><NavLink  exact to="/young">Mam poniżej 18 lat</NavLink></button>
-                        <button className="btnStart homeButtons"><NavLink  exact to="/adult">Mam skończone 18 lat</NavLink></button>
+                        <button className="btnStart homeButtons"><NavLink  exact to="/logIn">Mam skończone 18 lat</NavLink></button>
                     </div>
                 </div>
             </div>
