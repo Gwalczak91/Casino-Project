@@ -31,7 +31,7 @@ class Adult extends React.Component {
             blackjack: "on"
         })
     };
-    
+
     render(){
         if (this.state.roulette === "on"){
             return <Redirect to="/adult/rulette" />

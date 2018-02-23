@@ -1,5 +1,5 @@
 import React from "react";
-import img from '../img/under18.jpeg'
+import imgZakaz from '../img/under18.jpeg'
 
 class Young extends React.Component {
     constructor(props){
@@ -10,7 +10,7 @@ class Young extends React.Component {
         return(
             <div className="home">
                 <div className="youngStylePage">
-                    <img src={img} alt="Zakaz" title="Zakaz"></img>
+                    <img src={imgZakaz} alt="Zakaz" title="Zakaz"></img>
                     <h1 style={{marginTop: "25px"}}>Wymagane posiadanie 18 lat !!!</h1>
                 </div>
             </div>
