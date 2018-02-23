@@ -97,6 +97,31 @@ class Rulette extends React.Component {
 
     };
 
+    takeReward = () => {
+        let newReward = {
+            wygrana: this.state.kwota
+        };
+
+        fetch("http://localhost:3000/winner", {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+            },
+            body:  JSON.stringify( newReward )
+        })
+            .then( resp => resp.json())
+            .then( resp => {
+                console.log( resp );
+            });
+
+        this.setState({
+            reward: true
+        })
+    };
+
+
+
 
     render(){
 
@@ -115,6 +140,8 @@ class Rulette extends React.Component {
 
         if(this.state.kwota < 0){
             return <Redirect to="/adult/gameover"/>
+        }else if (this.state.reward === true){
+            return <Redirect to="/adult/winnerlist"/>
         }else {
             return (
                 <div className="HolyGrail homeRulette">
@@ -180,6 +207,7 @@ class Rulette extends React.Component {
                                 <li>Postawienie na pole Red lub Black. Możliwa wygrana 1:1</li>
                             </ul>
                             <h2>Postawiłeś: <span style={{color: "white"}}>{this.state.bet}</span> na pole <span style={{color: "white"}}>{this.state.betSpace}</span></h2>
+                            <button onClick={this.takeReward}>Odbierz wygraną</button>
                         </div>
                     </div>
                 </div>

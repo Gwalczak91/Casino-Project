@@ -6,6 +6,7 @@ import {HashRouter, Route, Redirect, Link, Switch, NavLink} from 'react-router-d
 import LogIn from "./login.jsx"
 import Register from "./register.jsx"
 import GameOver from './gameover.jsx'
+import Winner from './winner.jsx'
 import BlackJack from './blackjack.jsx'
 import DiceGame from './dicegame.jsx'
 import Start from './start.jsx'
@@ -34,6 +35,7 @@ class App extends React.Component {
                         <Route exact path="/adult/dice" component={DiceGame}></Route>
                         <Route exact path="/adult/blackjack" component={BlackJack}></Route>
                         <Route exact path="/adult/gameover" component={GameOver}></Route>
+                        <Route exact path="/adult/winnerlist" component={Winner}></Route>
                     </Switch>
                 </div>
             </HashRouter>

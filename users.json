@@ -12,5 +12,11 @@
       "password": "qwerty",
       "id": 2
     }
+  ],
+  "winner": [
+    {
+      "id": 1,
+      "wygrana": 2340
+    }
   ]
 }
