@@ -11,12 +11,22 @@
       "age": "27",
       "password": "qwerty",
       "id": 2
+    },
+    {
+      "name": "Andrzej",
+      "age": "87",
+      "password": "1234",
+      "id": 3
     }
   ],
   "winner": [
     {
       "id": 1,
       "wygrana": 2340
+    },
+    {
+      "wygrana": 2800,
+      "id": 2
     }
   ]
 }
