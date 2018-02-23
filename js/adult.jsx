@@ -1,47 +1,64 @@
 import React from "react";
 import {HashRouter, Route, Redirect, Link, Switch, NavLink} from 'react-router-dom';
-
+import img1 from "../img/rouletteImg.jpeg"
+import img2 from "../img/dice.jpeg"
+import img3 from "../img/blackjack.jpeg"
 
 class Adult extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            option: "Ruletka",
-            go: false
+            roulette: "off",
+            dice: "off",
+            blackjack: "off"
         }
     }
 
-    changeGameBoard = (e) => {
+    goToRoulletSite = () => {
         this.setState({
-            option: e.currentTarget.value
+            roulette: "on"
         })
     };
 
-    chosenGame = () => {
+    goToDiceSite = () => {
         this.setState({
-            go: true
+            dice: "on"
         })
     };
 
+    goToBlackJackSite = () => {
+        this.setState({
+            blackjack: "on"
+        })
+    };
+    
     render(){
-        if(this.state.option ==="Ruletka" && this.state.go === true){
-            return <Redirect to="/adult/rulette/" />
-        }else if(this.state.option ==="Gra w kości" && this.state.go === true){
+        if (this.state.roulette === "on"){
+            return <Redirect to="/adult/rulette" />
+        }else if (this.state.dice === "on"){
             return <Redirect to="/adult/dice" />
-        }else if(this.state.option ==="BlackJack" && this.state.go === true){
+        }else if (this.state.blackjack === "on"){
             return <Redirect to="/adult/blackjack" />
         }else {
             return (
-                <div className="home">
-                    <div style={{textAlign: "center", textTransform: "uppercase"}}>
-                        <h1>Wybierz Gre</h1>
-                        <select className="selectStyles" value={this.state.value} onChange={this.changeGameBoard}>
-                            <option value="Ruletka">Ruletka</option>
-                            <option value="Gra w kości">Gra w kości</option>
-                            <option value="BlackJack">BlackJack</option>
-                        </select>
-                        <br />
-                        <button className="buttonStyles" onClick={this.chosenGame}>Zagraj</button>
+                <div className="adult">
+                    <h1 className="headerAdultStyles">Wybierz Gre</h1>
+                    <div className="container3col">
+                        <div className="singleColStyles">
+                            <h3>Ruletka</h3>
+                            <img className="wrapperImgAdult" src={img1} alt="roulette" title="roulette"/>
+                            <button onClick={this.goToRoulletSite}>Zagraj</button>
+                        </div>
+                        <div className="singleColStyles">
+                            <h3>Gra w kości</h3>
+                            <img className="wrapperImgAdult" src={img2} alt="roulette" title="roulette"/>
+                            <button onClick={this.goToDiceSite}>Zagraj</button>
+                        </div>
+                        <div className="singleColStyles">
+                            <h3>BlackJack</h3>
+                            <img className="wrapperImgAdult" src={img3} alt="roulette" title="roulette"/>
+                            <button onClick={this.goToBlackJackSite}>Zagraj</button>
+                        </div>
                     </div>
                 </div>
             )

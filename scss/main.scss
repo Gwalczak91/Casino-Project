@@ -30,7 +30,7 @@
   background-size: cover;
 }
 
-.gameover {
+.gameover {  //tło dla strony gameOver
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,4 +44,13 @@
   color: white;
 }
 
+.adult {
+  width: 100vw;
+  height: 100vh;
+  background-color: gold;
+  background-image: url("../img/casino-back.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
 

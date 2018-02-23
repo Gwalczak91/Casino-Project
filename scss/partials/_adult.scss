@@ -1,12 +1,30 @@
 //// Style dla pliku adult.jsx
 
-.selectStyles {
-  width: 100px;
-  height: 25px;
-  margin: 20px 0;
+.headerAdultStyles {
+  font-size: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 25px;
+  margin-bottom: 50px;
+}
+
+.wrapperImgAdult {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  opacity: 0.75;
+}
+
+.container3col {
+  display: flex;
+  justify-content: space-around;
 }
 
 
-.buttonStyles {
-  width: 100px;
+.singleColStyles {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
 }
