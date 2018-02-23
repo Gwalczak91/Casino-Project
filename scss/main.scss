@@ -22,12 +22,26 @@
 }
 
 .homeRulette {  //tło dla strony z ruletka
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: gold;
   background-image: url("../img/rulette-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.gameover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+  background-color: gold;
+  background-image: url("../img/casino-back.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
 }
 
 
