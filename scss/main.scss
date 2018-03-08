@@ -30,6 +30,15 @@
   background-size: cover;
 }
 
+.homeDice {
+  width: 100vw;
+  height: 100vh;
+  background-color: gold;
+  background-image: url("../img/rulette-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .gameover {  //tło dla strony gameOver
   display: flex;
   align-items: center;

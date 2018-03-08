@@ -8,8 +8,8 @@ class DiceGame extends React.Component { // do zrobienia później
 
     render(){
         return(
-            <div>
-                Witaj na grze w kosci
+            <div className="homeDice">
+                <h1>Kości</h1>
             </div>
         )
     }
