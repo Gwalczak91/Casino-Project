@@ -39,6 +39,21 @@ class DiceGame extends React.Component { // do zrobienia później
                     <div className="dice">{this.state.diceTwo}</div>
                 </div>
                 <p>Wynik rzutu = {diceSum} </p>
+                <div className="allNumbers-container">
+                    <div className="numbers">1</div>
+                    <div className="numbers">2</div>
+                    <div className="numbers">3</div>
+                    <div className="numbers">4</div>
+                    <div className="numbers">5</div>
+                    <div className="numbers">6</div>
+                    <div className="numbers">7</div>
+                    <div className="numbers">8</div>
+                    <div className="numbers">9</div>
+                    <div className="numbers">10</div>
+                    <div className="numbers">11</div>
+                    <div className="numbers">12</div>
+                </div>
+    
             </div>
         )
     }
