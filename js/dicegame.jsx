@@ -53,6 +53,11 @@ class DiceGame extends React.Component { // do zrobienia później
                     <div className="numbers">11</div>
                     <div className="numbers">12</div>
                 </div>
+                <div className="allNumbers-container">
+                    <div className="special-dice-result-space">Double</div>
+                    <div className="special-dice-result-space">Less than 7</div>
+                    <div className="special-dice-result-space">More than 7</div>
+                </div>
     
             </div>
         )
